@@ -8,24 +8,24 @@ const USD_TO_EUR_RATE = 0.92;
 // Item definitions with their base USD values
 // Prices updated based on mid-2024 estimates
 const ITEM_DEFINITIONS = {
-    privateJet: { usdValue: 25000000 },
-    privateIsland: { usdValue: 10000000 },
+    privateIsland: { usdValue: 15000000 },
+    privateJet: { usdValue: 8000000 },
     luxuryHouse: { usdValue: 1500000, eurOverrideValue: 2000000 },
     yacht: { usdValue: 5000000 },
     luxuryCar: { usdValue: 250000 },
-    goldKg: { usdValue: 75000 }, // 1 kg of Gold (approx. $2300/oz * 32.15 oz/kg)
-    bitcoin: { usdValue: 65000 }, // 1 Bitcoin (hypothetical value)
+    goldKg: { usdValue: 108000 }, // 1 kg of Gold (approx. $2300/oz * 32.15 oz/kg)
+    bitcoin: { usdValue: 110000 }, // 1 Bitcoin (hypothetical value)
     mediumHouse: { usdValue: 400000, eurOverrideValue: 500000 },
     electricCar: { usdValue: 50000 },
     gamingPc: { usdValue: 3000 },
     watch: { usdValue: 15000 },
     designerHandbag: { usdValue: 5000 },
-    silverKg: { usdValue: 1000 }, // 1 kg of Silver (approx. $30/oz * 32.15 oz/kg)
+    silverKg: { usdValue: 1250 }, 
     computer: { usdValue: 1200 },
     smartphone: { usdValue: 1000 },
     smallHouse: { usdValue: 200000, eurOverrideValue: 250000 },
     fineDiningMeal: { usdValue: 300 },
-    pizza: { usdValue: 25 },
+    pizza: { usdValue: 20 },
     coffee: { usdValue: 6 },
 };
 

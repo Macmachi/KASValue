@@ -1,7 +1,7 @@
 <!-- 
  * KASValue - Kaspa Price Tracker & Comparative Costs
  * Rymentz
- * v1.0.0
+ * v1.0.1
  * License MIT
 -->
 <!DOCTYPE html>
@@ -46,17 +46,17 @@
         <div class="category-section">
             <h2 data-i18n="majorAssetsCategory">Major Assets & Extreme Luxury</h2>
             <div class="items-grid">
-                <div class="item-card" id="privateJet-card">
-                    <i class="fa-solid fa-plane"></i>
-                    <h3 data-item-key="privateJet"></h3>
-                    <p class="item-price" id="privateJet-kaspa">Loading... <span class="kas-unit">KAS</span></p>
-                    <p class="fiat-price" id="privateJet-fiat"></p>
-                </div>
                 <div class="item-card" id="privateIsland-card">
                     <i class="fa-solid fa-umbrella-beach"></i> <!-- Changed icon from Pro to Free -->
                     <h3 data-item-key="privateIsland"></h3>
                     <p class="item-price" id="privateIsland-kaspa">Loading... <span class="kas-unit">KAS</span></p>
                     <p class="fiat-price" id="privateIsland-fiat"></p>
+                </div>
+                <div class="item-card" id="privateJet-card">
+                    <i class="fa-solid fa-plane"></i>
+                    <h3 data-item-key="privateJet"></h3>
+                    <p class="item-price" id="privateJet-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="privateJet-fiat"></p>
                 </div>
                 <div class="item-card" id="yacht-card">
                     <i class="fa-solid fa-sailboat"></i>
@@ -70,17 +70,23 @@
                     <p class="item-price" id="luxuryHouse-kaspa">Loading... <span class="kas-unit">KAS</span></p>
                     <p class="fiat-price" id="luxuryHouse-fiat"></p>
                 </div>
+                <div class="item-card" id="mediumHouse-card">
+                    <i class="fa-solid fa-house-user"></i>
+                    <h3 data-item-key="mediumHouse"></h3>
+                    <p class="item-price" id="mediumHouse-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="mediumHouse-fiat"></p>
+                </div>
                 <div class="item-card" id="luxuryCar-card">
                     <i class="fa-solid fa-car-side"></i>
                     <h3 data-item-key="luxuryCar"></h3>
                     <p class="item-price" id="luxuryCar-kaspa">Loading... <span class="kas-unit">KAS</span></p>
                     <p class="fiat-price" id="luxuryCar-fiat"></p>
                 </div>
-                <div class="item-card" id="goldKg-card">
-                    <i class="fa-solid fa-gem"></i>
-                    <h3 data-item-key="goldKg"></h3>
-                    <p class="item-price" id="goldKg-kaspa">Loading... <span class="kas-unit">KAS</span></p>
-                    <p class="fiat-price" id="goldKg-fiat"></p>
+                <div class="item-card" id="smallHouse-card">
+                    <i class="fa-solid fa-house"></i>
+                    <h3 data-item-key="smallHouse"></h3>
+                    <p class="item-price" id="smallHouse-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="smallHouse-fiat"></p>
                 </div>
                 <div class="item-card" id="bitcoin-card">
                     <i class="fa-brands fa-bitcoin"></i>
@@ -88,29 +94,23 @@
                     <p class="item-price" id="bitcoin-kaspa">Loading... <span class="kas-unit">KAS</span></p>
                     <p class="fiat-price" id="bitcoin-fiat"></p>
                 </div>
+                <div class="item-card" id="goldKg-card">
+                    <i class="fa-solid fa-gem"></i>
+                    <h3 data-item-key="goldKg"></h3>
+                    <p class="item-price" id="goldKg-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="goldKg-fiat"></p>
+                </div>
             </div>
         </div>
 
         <div class="category-section">
             <h2 data-i18n="techMetalsDailyCategory">Technology, Metals & Daily Essentials</h2>
             <div class="items-grid">
-                <div class="item-card" id="mediumHouse-card">
-                    <i class="fa-solid fa-house-user"></i>
-                    <h3 data-item-key="mediumHouse"></h3>
-                    <p class="item-price" id="mediumHouse-kaspa">Loading... <span class="kas-unit">KAS</span></p>
-                    <p class="fiat-price" id="mediumHouse-fiat"></p>
-                </div>
                 <div class="item-card" id="electricCar-card">
                     <i class="fa-solid fa-car-battery"></i>
                     <h3 data-item-key="electricCar"></h3>
                     <p class="item-price" id="electricCar-kaspa">Loading... <span class="kas-unit">KAS</span></p>
                     <p class="fiat-price" id="electricCar-fiat"></p>
-                </div>
-                <div class="item-card" id="gamingPc-card">
-                    <i class="fa-solid fa-gamepad"></i>
-                    <h3 data-item-key="gamingPc"></h3>
-                    <p class="item-price" id="gamingPc-kaspa">Loading... <span class="kas-unit">KAS</span></p>
-                    <p class="fiat-price" id="gamingPc-fiat"></p>
                 </div>
                 <div class="item-card" id="watch-card">
                      <i class="fa-solid fa-clock"></i> 
@@ -130,6 +130,12 @@
                     <p class="item-price" id="silverKg-kaspa">Loading... <span class="kas-unit">KAS</span></p>
                     <p class="fiat-price" id="silverKg-fiat"></p>
                 </div>
+                <div class="item-card" id="gamingPc-card">
+                    <i class="fa-solid fa-gamepad"></i>
+                    <h3 data-item-key="gamingPc"></h3>
+                    <p class="item-price" id="gamingPc-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="gamingPc-fiat"></p>
+                </div>
                 <div class="item-card" id="computer-card">
                     <i class="fa-solid fa-laptop"></i>
                     <h3 data-item-key="computer"></h3>
@@ -141,12 +147,6 @@
                     <h3 data-item-key="smartphone"></h3>
                     <p class="item-price" id="smartphone-kaspa">Loading... <span class="kas-unit">KAS</span></p>
                     <p class="fiat-price" id="smartphone-fiat"></p>
-                </div>
-                <div class="item-card" id="smallHouse-card">
-                    <i class="fa-solid fa-house"></i>
-                    <h3 data-item-key="smallHouse"></h3>
-                    <p class="item-price" id="smallHouse-kaspa">Loading... <span class="kas-unit">KAS</span></p>
-                    <p class="fiat-price" id="smallHouse-fiat"></p>
                 </div>
                 <div class="item-card" id="fineDiningMeal-card">
                     <i class="fa-solid fa-utensils"></i>
