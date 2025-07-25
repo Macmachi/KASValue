@@ -2,6 +2,8 @@
 
 **KASValue** is a simple, interactive web application designed to help users visualize the real-world purchasing power of Kaspa (KAS) by comparing its current price against various goods, from daily essentials to luxury assets. This project aims to provide a clear and engaging perspective on Kaspa's value in different fiat currencies.
 
+**[Visit KASValue Live Here!](https://macmachi.github.io/KASValue/)**
+
 ## About Kaspa (KAS)
 
 Kaspa is a revolutionary, open-source, decentralized, and instantly verifiable Layer-1 cryptocurrency. It is unique in its implementation of the **BlockDAG** (Block Directed Acyclic Graph) architecture, a digital ledger that generalizes Satoshi Nakamoto's Bitcoin consensus to a Directed Acyclic Graph of blocks.
