@@ -1,0 +1,190 @@
+<!-- 
+ * KASValue - Kaspa Price Tracker & Comparative Costs
+ * Rymentz
+ * v1.0.0
+ * License MIT
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Track Kaspa (KAS) price in real-time and compare its value with everyday and luxury goods. Multilingual and multi-currency support.">
+    <title data-i18n="pageTitle">Kaspa Price Tracker & Comparative Costs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons (Stable Version 6.5.2) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Your CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 data-i18n="mainTitle">Kaspa Price & Comparative Costs</h1>
+
+        <div class="controls">
+            <select id="language-selector">
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="es">Español</option>
+                <option value="de">Deutsch</option>
+                <option value="zh">中文</option>
+                <option value="ja">日本語</option>
+                <option value="ar">العربية</option>
+            </select>
+            <select id="currency-selector">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select>
+        </div>
+
+        <div class="price-section">
+            <h2 data-i18n="kaspaPriceTitle">Current Kaspa Price</h2>
+            <div class="price-value" id="kaspa-price">Loading...</div>
+            <div class="last-updated" id="last-updated">Last updated: --</div>
+        </div>
+
+        <div class="category-section">
+            <h2 data-i18n="majorAssetsCategory">Major Assets & Extreme Luxury</h2>
+            <div class="items-grid">
+                <div class="item-card" id="privateJet-card">
+                    <i class="fa-solid fa-plane"></i>
+                    <h3 data-item-key="privateJet"></h3>
+                    <p class="item-price" id="privateJet-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="privateJet-fiat"></p>
+                </div>
+                <div class="item-card" id="privateIsland-card">
+                    <i class="fa-solid fa-umbrella-beach"></i> <!-- Changed icon from Pro to Free -->
+                    <h3 data-item-key="privateIsland"></h3>
+                    <p class="item-price" id="privateIsland-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="privateIsland-fiat"></p>
+                </div>
+                <div class="item-card" id="yacht-card">
+                    <i class="fa-solid fa-sailboat"></i>
+                    <h3 data-item-key="yacht"></h3>
+                    <p class="item-price" id="yacht-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="yacht-fiat"></p>
+                </div>
+                <div class="item-card" id="luxuryHouse-card">
+                    <i class="fa-solid fa-house-chimney"></i> <!-- Changed icon from Pro to Free -->
+                    <h3 data-item-key="luxuryHouse"></h3>
+                    <p class="item-price" id="luxuryHouse-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="luxuryHouse-fiat"></p>
+                </div>
+                <div class="item-card" id="luxuryCar-card">
+                    <i class="fa-solid fa-car-side"></i>
+                    <h3 data-item-key="luxuryCar"></h3>
+                    <p class="item-price" id="luxuryCar-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="luxuryCar-fiat"></p>
+                </div>
+                <div class="item-card" id="goldKg-card">
+                    <i class="fa-solid fa-gem"></i>
+                    <h3 data-item-key="goldKg"></h3>
+                    <p class="item-price" id="goldKg-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="goldKg-fiat"></p>
+                </div>
+                <div class="item-card" id="bitcoin-card">
+                    <i class="fa-brands fa-bitcoin"></i>
+                    <h3 data-item-key="bitcoin"></h3>
+                    <p class="item-price" id="bitcoin-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="bitcoin-fiat"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h2 data-i18n="techMetalsDailyCategory">Technology, Metals & Daily Essentials</h2>
+            <div class="items-grid">
+                <div class="item-card" id="mediumHouse-card">
+                    <i class="fa-solid fa-house-user"></i>
+                    <h3 data-item-key="mediumHouse"></h3>
+                    <p class="item-price" id="mediumHouse-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="mediumHouse-fiat"></p>
+                </div>
+                <div class="item-card" id="electricCar-card">
+                    <i class="fa-solid fa-car-battery"></i>
+                    <h3 data-item-key="electricCar"></h3>
+                    <p class="item-price" id="electricCar-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="electricCar-fiat"></p>
+                </div>
+                <div class="item-card" id="gamingPc-card">
+                    <i class="fa-solid fa-gamepad"></i>
+                    <h3 data-item-key="gamingPc"></h3>
+                    <p class="item-price" id="gamingPc-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="gamingPc-fiat"></p>
+                </div>
+                <div class="item-card" id="watch-card">
+                     <i class="fa-solid fa-clock"></i> 
+                    <h3 data-item-key="watch"></h3>
+                    <p class="item-price" id="watch-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="watch-fiat"></p>
+                </div>
+                <div class="item-card" id="designerHandbag-card">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <h3 data-item-key="designerHandbag"></h3>
+                    <p class="item-price" id="designerHandbag-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="designerHandbag-fiat"></p>
+                </div>
+                <div class="item-card" id="silverKg-card">
+                    <i class="fa-solid fa-coins"></i>
+                    <h3 data-item-key="silverKg"></h3>
+                    <p class="item-price" id="silverKg-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="silverKg-fiat"></p>
+                </div>
+                <div class="item-card" id="computer-card">
+                    <i class="fa-solid fa-laptop"></i>
+                    <h3 data-item-key="computer"></h3>
+                    <p class="item-price" id="computer-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="computer-fiat"></p>
+                </div>
+                <div class="item-card" id="smartphone-card">
+                    <i class="fa-solid fa-mobile-alt"></i>
+                    <h3 data-item-key="smartphone"></h3>
+                    <p class="item-price" id="smartphone-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="smartphone-fiat"></p>
+                </div>
+                <div class="item-card" id="smallHouse-card">
+                    <i class="fa-solid fa-house"></i>
+                    <h3 data-item-key="smallHouse"></h3>
+                    <p class="item-price" id="smallHouse-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="smallHouse-fiat"></p>
+                </div>
+                <div class="item-card" id="fineDiningMeal-card">
+                    <i class="fa-solid fa-utensils"></i>
+                    <h3 data-item-key="fineDiningMeal"></h3>
+                    <p class="item-price" id="fineDiningMeal-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="fineDiningMeal-fiat"></p>
+                </div>
+                <div class="item-card" id="pizza-card">
+                    <i class="fa-solid fa-pizza-slice"></i>
+                    <h3 data-item-key="pizza"></h3>
+                    <p class="item-price" id="pizza-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="pizza-fiat"></p>
+                </div>
+                <div class="item-card" id="coffee-card">
+                    <i class="fa-solid fa-mug-hot"></i>
+                    <h3 data-item-key="coffee"></h3>
+                    <p class="item-price" id="coffee-kaspa">Loading... <span class="kas-unit">KAS</span></p>
+                    <p class="fiat-price" id="coffee-fiat"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="quotes-section">
+            <h2 data-i18n="quoteTitle">Quote of the Day</h2>
+            <p id="quote-text"></p>
+            <p class="author" id="quote-author"></p>
+        </div>
+
+        <footer>
+            <span data-i18n="footerText">Price data provided by <a href="https://api.kaspa.org" target="_blank">api.kaspa.org</a>. Item prices are estimates.</span>
+            <br>
+            <span data-i18n="footerUpdateInfo">Automatic update every 15 minutes via local cache.</span>
+        </footer>
+    </div>
+
+    <!-- Your JavaScript file for translations -->
+    <script src="translations.js"></script>
+    <!-- Your main JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
